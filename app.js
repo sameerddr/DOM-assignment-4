@@ -4,14 +4,9 @@ const addRowBtn = document.querySelector('form');
 const fullName = document.querySelector('#name');
 const errMsg = document.querySelector('.error-msg');
 let check = document.querySelector(".check");
-
-
-
 const resetForm = () => {
     fullName.value = "";
 }
-
-
 
 const addRow = (e) => {
     e.preventDefault();
@@ -39,9 +34,8 @@ const removeRow = (e) => {
 }
 const editRow = (e) => {
     if (e.target.id === 'edit-btn')
-        console.log("Edit Task...");
-    console.log("Change 'edit' to 'save'");
-
+        e.target.parentElement.parentElement.contentEditable = true;
+    console.log("Edit Task...");
 }
 
 addRowBtn.addEventListener('submit', addRow);
