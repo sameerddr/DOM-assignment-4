@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-app</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container1">
+            <form class="form1">
+                <h2>ADD ITEM</h2>
+                <hr>
+                <div class="content1">
+                    <label><input type="text" name="name" id="name" placeholder="Add data"></label>
+                    <button type="submit" id="add-row">Add</button>
+                    <div class="error-msg"></div>
+                </div>
+            </form>
+        </div>
+        <div class="container2">
+            <h2>TODO</h2>
+            <hr>
+            <table>
+                <tbody class="data-entry">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="container3">
+            <h2>COMPLETED</h2>
+            <hr>
+            <table>
+                <tbody class="dustbin">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+<script src="/app.js"></script>
+
+</html>

@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    /* background-image: linear-gradient(to right, #DECBA4, #3E5151); */
+    min-height: 100%;
+}
+
+.container {
+    display: flex;
+}
+
+.container1 {
+    width: 400px;
+    height: 200px;
+    margin: 40px 0px 100px 50px;
+    border: 2px solid black;
+    background-color: antiquewhite;
+    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.form1 label {
+    margin: 50px 40px 0px 20px;
+}
+
+.content1 {
+    margin: 40px 0px 50px 0px;
+}
+
+h2 {
+    margin: 20px 0px 0px 20px;
+}
+
+.container2 {
+    width: 400px;
+    margin: 40px 0px 100px 50px;
+    border: 2px solid black;
+    background-color: antiquewhite;
+    background-image: linear-gradient(to right, #2c3e50, #4ca1af);
+    background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.container3 {
+    width: 400px;
+    margin: 40px 0px 100px 50px;
+    border: 2px solid black;
+    background-color: antiquewhite;
+    background-image: linear-gradient(to right, #ff9966, #ff5e62);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+input {
+    width: 50%;
+    padding: 8px;
+    outline: none;
+    background-color: #fff;
+    border: 2px solid #d9d3d3;
+    border-radius: 10%;
+}
+
+button {
+    outline: none;
+    border-radius: 5px;
+    padding: 4px 15px;
+    background-color: #2da1e4;
+    color: white;
+}
+
+.error-msg {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    /* margin-top: 100px; */
+    /* height: 3rem; */
+}
+
+#remove-btn {
+    background-color: whitesmoke;
+    color: black;
+    outline: none;
+}
+
+#edit-btn {
+    background-color: whitesmoke;
+    color: black;
+    outline: none;
+}
