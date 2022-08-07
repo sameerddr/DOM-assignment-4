@@ -11,6 +11,8 @@ const resetForm = () => {
     fullName.value = "";
 }
 
+
+
 const addRow = (e) => {
     e.preventDefault();
     if (!(fullName.value)) {
@@ -36,27 +38,12 @@ const removeRow = (e) => {
         e.target.parentElement.parentElement.remove();
 }
 const editRow = (e) => {
-    // if (e.target.id === 'edit-btn')
-    console.log("Edit Task...");
+    if (e.target.id === 'edit-btn')
+        console.log("Edit Task...");
     console.log("Change 'edit' to 'save'");
-    var listItem = this.parentNode;
 
-    var editInput = listItem.querySelector("#edit-btn");
-    // var label = listItem.querySelector("label");
-    // var containsClass = listItem.classList.contains("editMode");
-    //If class of the parent is .editmode
-    // if (containsClass) {
-
-    //     //switch to .editmode
-    //     //label becomes the inputs value.
-    //     label.innerText = editInput.value;
-    // } else {
-    //     editInput.value = label.innerText;
-    // }
-
-    // //toggle .editmode on the parent.
-    // listItem.classList.toggle("editMode");
 }
+
 addRowBtn.addEventListener('submit', addRow);
 tbody.addEventListener('click', removeRow);
 tbody.addEventListener('click', editRow);
