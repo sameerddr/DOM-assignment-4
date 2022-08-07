@@ -3,10 +3,11 @@ const tbody = document.querySelector('.data-entry');
 const addRowBtn = document.querySelector('form');
 const fullName = document.querySelector('#name');
 const errMsg = document.querySelector('.error-msg');
-let check = document.querySelector(".check");
+var incompleteTaskHolder = document.getElementById(".dustbin");
 const resetForm = () => {
     fullName.value = "";
 }
+
 
 const addRow = (e) => {
     e.preventDefault();
@@ -22,6 +23,7 @@ const addRow = (e) => {
         <td>${fullName.value}</td>
         <td class="action-btn"><button id="remove-btn">\u{1F5D1}</button></td>
         <td class="action-btn"><button id="edit-btn">\u{1F58A}</button></td>
+        <td class="action-btn"><button id="complete-btn">complete</button></td>
         `;
         tbody.appendChild(newElm);
         resetForm();
@@ -37,7 +39,19 @@ const editRow = (e) => {
         e.target.parentElement.parentElement.contentEditable = true;
     console.log("Edit Task...");
 }
+const shift = (e) => {
+    if (e.target.id === 'edit-btn')
+        e.target.parentElement.parentElement.remove();
+    var newElm2 = document.createElement('tr');
+    newElm2.setAttribute("class", "row");
+    newElm2.innerHTML = `
+        <td>${fullName.value}</td>
+        `;
+    tbody.appendChild(newElm2);
+    resetForm();
+}
 
 addRowBtn.addEventListener('submit', addRow);
 tbody.addEventListener('click', removeRow);
 tbody.addEventListener('click', editRow);
+incompleteTaskHolder.addEventListener('click', shift);
