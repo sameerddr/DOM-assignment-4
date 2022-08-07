@@ -3,6 +3,8 @@ const tbody = document.querySelector('.data-entry');
 const addRowBtn = document.querySelector('form');
 const fullName = document.querySelector('#name');
 const errMsg = document.querySelector('.error-msg');
+let check = document.querySelector(".check");
+
 
 
 const resetForm = () => {
